@@ -20,6 +20,7 @@ TEMARIO
  2.4 Métodos de interpolación. 
  2.5 Aplicaciones.
 
+![Captura de pantalla (392)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/6f33161d-5b7b-4b4f-9b91-01a7fec93c11)
 
 
 
