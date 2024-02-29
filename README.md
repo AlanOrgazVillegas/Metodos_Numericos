@@ -1,9 +1,14 @@
+SOBRE MI Y EL REPOSITORIO
+
+Mi nombre es Alan Orgaz Villegas y soy estudiante de cuarto semestre de la carrera de ingeniería en sistemas computacionales en ITESA.
+
 El presente repositorio abarca tres metodos numericos: Metodo de biseccion, metodo de regla falsa, y metodo de secante.
 
 Cada carpeta tiene 5 ejericios con diferentes funciones, en los programas se piden los limtes, la cantidad de intervalos, la tolerancia o el error aceptable. Por 
 último se muetsra la raíz.
 
 *****************************************************************************************************************************************************************
+SOBRE LA MATERIA
 
 Competencia de la Asignatura
 
@@ -20,6 +25,7 @@ TEMARIO
  2.4 Métodos de interpolación. 
  2.5 Aplicaciones.
 
+*************************************************************************************************************************************************************
  Algunas representaciones graficas:
 
 Metodo de biseccion
@@ -31,5 +37,5 @@ Metodo de la regla falsa
 Metodo de secante
 ![Captura de pantalla (394)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/239dc843-299f-4c81-bb9e-cfccb03b2de4)
 
-
+En cada carpeta se encuentra la descripcion de cada metodo a fin de contextualizar cada uno.
  
