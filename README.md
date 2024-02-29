@@ -26,6 +26,8 @@ TEMARIO
  2.3 Método de aproximaciones sucesivas. 
  2.4 Métodos de interpolación. 
  2.5 Aplicaciones.
+ 
+![iphone se roto 2](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/ff567cff-12e7-4fc0-9bda-19e62fec01c2)
 
 *************************************************************************************************************************************************************
  Algunas representaciones graficas:
