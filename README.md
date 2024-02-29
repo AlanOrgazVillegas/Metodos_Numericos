@@ -20,9 +20,16 @@ TEMARIO
  2.4 Métodos de interpolación. 
  2.5 Aplicaciones.
 
+ Algunas representaciones graficas:
+
+Metodo de biseccion
 ![Captura de pantalla (392)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/6f33161d-5b7b-4b4f-9b91-01a7fec93c11)
 
+Metodo de la regla falsa
+![Captura de pantalla (393)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/c6f05713-2b6e-476e-b9c7-f30dfadcec78)
 
+Metodo de secante
+![Captura de pantalla (394)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/239dc843-299f-4c81-bb9e-cfccb03b2de4)
 
 
  
