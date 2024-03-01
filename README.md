@@ -151,8 +151,6 @@ Raíz: 1.36719
 ![Captura de pantalla (393)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/c6f05713-2b6e-476e-b9c7-f30dfadcec78)
 
 Descripcion
-![Captura de pantalla (403)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/93f0ff17-7503-4dfb-a1ea-96147b91eb32)
-
 Aun cuando la bisección es una técnica perfectamente válida para determinar raíces, su método de aproximación por “fuerza bruta” es relativamente ineficiente. La falsa posición es una alternativa basada en una visualización gráfica.
 
 Algoritmo
@@ -166,7 +164,94 @@ Algoritmo
 4. Calcular el nuevo Xr.
 5. Calcular el error aproximado para ver si se cumple el criterio establecido.
 
+
+-----Ejemplo del metodo en cogigo java-------
+
+Función: x^4-9x^3+6  Limites: A:0  B:1    Error: 0.0001  Iteraciones: 6
+
+package metodo_reglafalsa;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Alan
+ */
+public class Metodo_reglaFalsa {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+       System.out.println("EJERCICIO 1 DE METODO DE LA REGLA FALSA ");
+
+       System.out.print("Ingrese el límite inferior: ");
+       double a = scanner.nextDouble();
+
+       System.out.print("Ingrese el límite superior: ");
+       double b = scanner.nextDouble();
+
+       System.out.print("Ingrese el número máximo de iteraciones: ");
+       int maxIter = scanner.nextInt();
+
+       System.out.print("Ingrese el valor de tolerancia: ");
+       double tol = scanner.nextDouble();
+
+       // Se calcula la raíz de la ecuación utilizando el método de la posición falsa
+       double root = metodoReglaFalsa(a, b, maxIter, tol);
+
+       // Se imprime el resultado en formato decimal con 5 cifras después del punto decimal
+       System.out.printf("La raíz de la ecuación es: %.5f%n", root);
+    }
+
+    // Método que implementa el algoritmo de la posición falsa
+    public static double metodoReglaFalsa(double a, double b, int maxIter, double tol) {
+       // Se verifica si la función cambia de signo en el intervalo [a, b]
+       if (func(a) * func(b) > 0) {
+           System.out.println("El método no puede encontrar una raíz en el intervalo.");
+           return -1;
+       }
+       
+       // Declarar las variables
+       double xa, xb, xr = 0;
+       xa = a;
+       xb = b;
+
+       for (int i = 0; i < maxIter; i++) {
+           xr = xb - (func(xb) * (xb - xa) / (func(xb) - func(xa)));
+           if (Math.abs(func(xr)) < tol) {
+               // Si la diferencia absoluta de la función en x2 es menor que la tolerancia, se devuelve x2 como la raíz
+               return xr;
+           }
+           if (func(xa) * func(xr) < 0) {
+               // Si la función cambia de signo entre x0 y x2, se actualiza x1
+               xb = xr;
+           } else {
+               // De lo contrario, se actualiza x0
+               xa = xr;
+           }
+       }
+       // Si se alcanza el número máximo de iteraciones sin encontrar una raíz con la tolerancia especificada, se devuelve el último valor de x2 como la raíz aproximada
+       return xr;
+   }
+
+    // Método que define la función cuya raíz se desea encontrar
+    public static double func(double x) {
+       return Math.pow(x, 4) - 9 * Math.pow(x, 3) + 6;
+    }
+}
+
+  Raíz: 0.90499
+
+  ----------Comprobación por Geogebra---------
+  
+![Captura de pantalla (404)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/6b08eacc-1dc4-44fa-a450-51aa6e9d8f42)
+
+
 ----------Metodo de secante------------
+
 ![Captura de pantalla (394)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/239dc843-299f-4c81-bb9e-cfccb03b2de4)
 
 Descripcion
@@ -177,5 +262,69 @@ Algoritmo
 
 El método se basa en obtener la ecuación de la recta que pasa por los puntos (xn−1, f(xn−1)) y (xn, f(xn)). A dicha recta se le llama secante por cortar la gráfica de la función. En forma punto-pendiente, esta línea tiene la ecuación mostrada anteriormente. Posteriormente se escoge como siguiente elemento de la relación de recurrencia, xn+1, la intersección de la recta secante con el eje de abscisas obteniendo la fórmula, y un nuevo valor. Seguimos este proceso, hasta llegar a un nivel suficientemente alto de precisión (una diferencia lo suficientemente pequeñas entre xn y xn-1).
 
+---Ejemplo de codigo en java-----
+Función: x^2-3x-4  Limites: A: 3.5 B: 4.5   Error: 0.0001   Iteraciones: 6
+ package metoto_secante;
 
- 
+import java.util.Scanner;
+
+/**
+ *
+ * @author Alan
+ */
+public class Metodo_secante {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        System.out.println(" EJEMPLO 1 METODO DE SECANTE ");
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese Xi: ");
+        double x0 = scanner.nextDouble(); // Leer Xi "a"
+        System.out.print("Ingrese Xi-1: ");
+        double x1 = scanner.nextDouble(); // Leer Xi-1 "b"
+        System.out.print("Ingrese el número máximo de iteraciones: ");
+        int maxIter = scanner.nextInt(); // Leer el número máximo de iteraciones 
+        System.out.print("Ingrese el valor de tolerancia: ");
+        double tol = scanner.nextDouble(); // Leer el valor de tolerancia 
+
+        double root = metodoSecante(x0, x1, maxIter, tol); // Llamar al método metodoSecante 
+
+        System.out.printf("La raíz de la ecuación es: %.5f%n", root); // Imprimir el resultado del método metodoSecante con 5 dígitos de precisión después del punto decimal
+    }
+
+    public static double metodoSecante(double x0, double x1, int maxIter, double tol) {
+        if (func(x0) * func(x1) == 0) {
+            System.out.println("El método no puede encontrar una raíz."); // Verificar 
+            return -1;
+        }
+
+        double x2 = 0;
+        for (int i = 0; i < maxIter; i++) {
+            x2 = x1 - (func(x1) * (x1 - x0) / (func(x1) - func(x0))); // Calcular la siguiente aproximacion usando el método de la secante
+            if (Math.abs(x1 - x2) < tol) {
+                return x2; // Si el cambio en las aproximaciones es menor que el valor de tolerancia, devolver la aproximacion actual como la raíz
+            }
+            x0 = x1; // Actualizar el valor de x0
+            x1 = x2; // Actualizar el valor de x1
+        }
+        return x2; // Si se alcanza el número máximo de iteraciones sin encontrar una raíz con la tolerancia especificada, devolver la última aproximacion
+    }
+
+    public static double func(double x) {
+        return Math.pow(x, 2) - 3 * x - 4; // Definir la función cuya raíz se desea encontrar
+    }
+
+}
+
+Raíz: 4.00000
+
+-----Comprobación en Geogebra----
+
+![Captura de pantalla (405)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/17c76055-746a-42d4-87fb-67029a1f93d4)
+
+
