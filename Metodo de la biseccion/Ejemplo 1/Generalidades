@@ -1,7 +1,7 @@
 Descripcion del ejemplo
 
-
+Función: x^3+4x^2-10    Limites: A:1 B:2    Error: 0.0001    Iteraciones: 6
 
 Implementacion (resultado)
 
-
+1.36719
