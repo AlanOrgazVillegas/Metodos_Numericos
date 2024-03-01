@@ -1,1 +1,7 @@
+Descripción del ejemplo
 
+Función: x^3+4x^2-10    Limites: A: 0 B:  2  Error: 0.0001   Iteraciones: 6
+
+Implementación (Resultado a 5 cifras decimales)
+
+1.36523
