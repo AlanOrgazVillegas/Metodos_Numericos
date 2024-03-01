@@ -140,6 +140,8 @@ public class Metodo_Biseccion {
 
 Raíz: 1.36719
 
+--------Comprobación por Geogebra------------
+
 ![Captura de pantalla (403)](https://github.com/AlanOrgazVillegas/Metodos_Numericos/assets/147757830/d7608b2a-b9c1-4019-a661-369bf66bb745)
 
 
