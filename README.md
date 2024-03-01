@@ -30,11 +30,11 @@ TEMARIO
 
 Metodos del rpositorio:
 
-         - Métedo de bisección: https://github.com/AlanOrgazVillegas/Metodos_Numericos/tree/main/Metodo%20de%20la%20biseccion
+         - Métedo de bisección
          
-         - Método de regla falsa: https://github.com/AlanOrgazVillegas/Metodos_Numericos/tree/main/Metodo%20de%20la%20regla%20falsa
+         - Método de regla falsa
          
-         - Método de la secante: https://github.com/AlanOrgazVillegas/Metodos_Numericos/tree/main/Metodo%20de%20la%20secante
+         - Método de la secante
 
 
 
