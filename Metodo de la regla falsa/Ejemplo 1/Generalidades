@@ -1,1 +1,7 @@
+Descripción del ejemplo
 
+Función: x^4-9x^3+6  Limites: A:0  B:1    Error: 0.0001  Iteraciones: 6
+
+Implementación (resultado a 5 cifras significativas)
+
+0.90499
