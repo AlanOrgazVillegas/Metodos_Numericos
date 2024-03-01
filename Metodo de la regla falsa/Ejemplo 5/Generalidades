@@ -1,1 +1,7 @@
+Descripción del ejemplo
 
+Función: -0.4x^2+2.3x+2.2    Limites:  A: -1.5 B: -0.5   Error: 0.0001    Iteraciones: 6
+
+Implementación (Resultado a 5 cifras significaticas)
+
+-0.83519
