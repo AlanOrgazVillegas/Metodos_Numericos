@@ -1,1 +1,8 @@
+Descripción del ejemplo
 
+Función: x^2-3x-4  Limites: A: 3.5 B: 4.5   Error: 0.0001   Iteraciones: 6
+
+Implementación (Resultado a 5 cifras decimales)
+
+4.00000
+4
